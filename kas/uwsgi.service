@@ -1,0 +1,16 @@
+[Unit]
+Description=uWSGI
+After=syslog.target
+
+[Service]
+ExecStart=/usr/bin/uwsgi --ini /home/pi/kas/uwsgi.ini
+Restart=always
+Type=simple
+StandardError=syslog
+KillSignal=SIGQUIT
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
+

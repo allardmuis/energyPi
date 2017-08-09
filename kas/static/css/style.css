@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+body {
+    margin: 0;
+}
+
+.glyphicon {
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#time-control {
+    position: absolute;
+    top: 0;
+    left: 53px;
+    width: calc(100% - 115px);
+    height: calc(100% - 113px);
+    margin-top: 7px;
+}
+
+#time-control .loading {
+    width: 100%;
+    height: 100%;
+}
+
+#time-control .loading:before {
+    content: "\e031";
+    font-size: 200px;
+    color: rgba(0, 0, 0, 0.4);
+    display: block;
+    text-align: center;
+    line-height: 80vh;
+}
+
+#time-control.loading a {
+    display: none !important;
+}
+
+#time-control a#back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: block;
+    width: 80px;
+}
+
+#time-control a#forward {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: block;
+    width: 80px;
+}
+
+#time-control a#back, #time-control a#forward {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 20;
+}
+
+#time-control a#back:before {
+    content: "\e132";
+    left: 15px;
+    top: 45%;
+    position: relative;
+}
+
+#time-control a#forward:before {
+    content: "\e131";
+    left: 15px;
+    top: 45%;
+    position: relative;
+}
+
+#time-control a#back:hover, #time-control a#forward:hover, #time-control a#zoomout:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+#time-control a#zoomout {
+    position: relative;
+    left: 45%;
+    top: 20px;
+    height: 80px;
+    display: block;
+    width: 100px;
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 20;
+}
+
+#time-control a#zoomout:before {
+    content: "\e016";
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 80px;
+}
+
+#time-control #zoomin {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+#time-control #zoomin #zoom-period {
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+}
+
+ul.sensor-list {
+    height: 100px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.sensor-list li {
+    list-style: none;
+    float: left;
+    display: block;
+    width: 200px;
+    height: 40px;
+}
+
+.sensor-list label {
+    width: 200px;
+    display: inline-block;
+    height: 60px;
+}
+
+.sensor-list label::before {
+    border-top: 40px solid red;
+    border-right: 40px solid grey;
+    content: "";
+    line-height: 0;
+    height: 0;
+    display: inline-block;
+    position: relative;
+    top: 14px;
+    margin-right: 15px;
+}
+
+.sensor-list input {
+    display: none;
+}

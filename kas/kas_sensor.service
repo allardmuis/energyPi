@@ -1,0 +1,19 @@
+[Unit]
+Description=Sensor reader for Kas
+After=syslog.target
+
+[Service]
+Type=simple
+User=pi
+Group=gpio
+WorkingDirectory=/home/pi/kas
+ExecStart=/usr/bin/python /home/pi/kas/sensor.py
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+ExecStartPre=/home/pi/kas/gpiomem
+PermissionsStartOnly=true
+
+[Install]
+WantedBy=multi-user.target
+

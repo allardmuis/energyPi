@@ -1,0 +1,4 @@
+#!/bin/bash
+chown root.gpio /dev/gpiomem
+chmod 660 /dev/gpiomem
+
